@@ -1,0 +1,18 @@
+# Default: advanced decoder-only Transformer (~3.2M params). Override with: --set key=value
+arch: transformer
+data: data/next_word_prediction_10000_sentences.csv
+out_dir: runs/transformer
+d_model: 256
+n_layers: 4
+n_heads: 4
+d_ff: 1024
+dropout: 0.2
+epochs: 80
+batch_size: 64
+lr: 0.0006
+weight_decay: 0.1
+label_smoothing: 0.05
+word_dropout: 0.10
+ema_decay: 0.995
+patience: 10
+seed: 42
